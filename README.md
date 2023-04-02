@@ -1,6 +1,6 @@
 # cors-jsonp-test
 
-这是一个使用JavaScript写的用于测试不安全CORS、JSONP的示例程序.
+这是一个使用Node.js写的用于测试不安全CORS、JSONP的示例程序.
 
 ## 1.vuln_cors_app
 
